@@ -21,6 +21,9 @@ module.exports = {
 
     let uwuified = "";
 
+    // Lowercase it
+    uwuified = uwuified.toLowerCase();
+
     // Stutter the first letter 2 times
     //
     //   hello world
@@ -33,8 +36,8 @@ module.exports = {
     // Add some dots
     uwuified += "...";
 
-    // Lowercase it
-    uwuified = uwuified.toLowerCase();
+    // Replace Ls with Ws
+    uwuified = uwuified.replace("l", "w");
 
     const embed = new Discord.MessageEmbed()
       .setDescription(uwuified)
