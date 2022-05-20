@@ -1,16 +1,11 @@
 // eslint-disable-next-line no-unused-vars
 const Discord = require("discord.js-light");
-const emojis = require("../../data/emojis.json");
 const randomColor = require("../utils/randomColor");
 
 module.exports = {
   name: "reverse",
   description: "probably reverses the text lol idk",
   options: [{ name: "text", description: "the text", type: String }],
-
-  randomEmoji() {
-    return emojis[Math.floor(Math.random() * emojis.length)];
-  },
 
   /**
    * @param {Discord.CommandInteraction} interaction
