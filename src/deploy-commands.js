@@ -16,6 +16,8 @@ require("dotenv").config();
   //
   //   name: string;
   //   description: string;
+  //   options: object[]; // I'm too lazy to document this, see in commands
+  //                      // directory
   //
   const commands = [];
   for (const fileName of await fs.readdir("src/commands")) {
