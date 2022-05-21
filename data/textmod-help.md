@@ -11,5 +11,4 @@ To get started, simply use one of the Slash Commands:tm:, e.g.:
 
 The rest of the commands can be found in the Slash Commands:tm: menu.
 
-TextMod is licensed under the MIT license, and the source code can be found
-[here](https://github.com/szskill/textmod)
+TextMod is licensed under the MIT license, and the source code can be found [here](https://github.com/szskill/textmod)
