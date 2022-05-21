@@ -19,6 +19,7 @@ module.exports = {
 
     let clapped = "";
     for (const word of words) {
+      // Add a clap emoji to each word
       clapped += `${word} 👏 `;
     }
 

@@ -22,6 +22,7 @@ module.exports = {
 
     let emojified = "";
     for (const word of words) {
+      // Add an emoji between each word
       emojified += `${word} ${this.randomEmoji()} `;
     }
 

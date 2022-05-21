@@ -16,6 +16,7 @@ module.exports = {
 
     let mocked = "";
     for (const char of text) {
+      // A 50/50 chance of making it lowercase/uppercase
       if (Math.random() > 0.5) {
         mocked += char.toUpperCase();
       } else {
