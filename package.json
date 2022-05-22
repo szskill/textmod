@@ -1,23 +1,26 @@
 {
-    "name": "textmod",
-    "description": "A Discord bot to modify text. Emojify, clap, more!",
-    "main": "src/index.js",
-    "license": "MIT",
-    "scripts": {
-        "start": "node .",
-        "deploy-commands": "node src/deploy-commands.js",
-        "lint": "eslint src/**/*.js",
-        "format": "prettier --write src/**/*.js"
-    },
-    "dependencies": {
-        "@discordjs/builders": "^0.13.0",
-        "@discordjs/rest": "^0.4.1",
-        "discord-api-types": "^0.32.1",
-        "discord.js-light": "^4.6.5",
-        "dotenv": "^16.0.1"
-    },
-    "devDependencies": {
-        "eslint": "^8.15.0",
-        "prettier": "^2.6.2"
-    }
+  "name": "textmod",
+  "description": "A Discord bot to modify text. Emojify, clap, more!",
+  "main": "src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node .",
+    "deploy-commands": "node src/deploy-commands.js",
+    "lint": "eslint src/**/*.js",
+    "format": "prettier --write src/**/*.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@discordjs/builders": "^0.13.0",
+    "@discordjs/rest": "^0.4.1",
+    "discord-api-types": "^0.32.1",
+    "discord.js-light": "^4.6.5",
+    "dotenv": "^16.0.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.5.1",
+    "eslint": "^8.15.0",
+    "jest": "^28.1.0",
+    "prettier": "^2.6.2"
+  }
 }
