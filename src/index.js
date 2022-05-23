@@ -57,7 +57,16 @@ client.on("interactionCreate", async (interaction) => {
   if (command === null) return;
 
   // Execute the command
-  await command.execute(interaction, options);
+  try {
+    await command.execute(interaction, options);
+  } catch (e) {
+    const embed = new Discord.MessageEmbed()
+      .setTitle("❌ Error")
+      .setDescription(e)
+      .setColor(0xffaaaa);
+
+    await interaction.reply({ embeds: [embed] });
+  }
 });
 
 // 🚀 Start the bot from the "TOKEN" environment variable
