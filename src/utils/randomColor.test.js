@@ -1,5 +1,3 @@
-/* eslint-disable no-undef */
-
 const randomColor = require("./randomColor");
 
 test("randomColor returns a color between 000000 and FFFFFF", () => {
