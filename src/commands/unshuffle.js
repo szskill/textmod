@@ -1,12 +1,12 @@
 // eslint-disable-next-line no-unused-vars
 const Discord = require("discord.js-light");
+const shuffleCmd = require("./shuffle");
 const randomColor = require("../utils/randomColor");
 
 module.exports = {
-  name: "shuffle",
-  description: "spdijfapsidjf pasidjfpa isjdfpaijsdpifj",
-  options: [{ name: "text", description: "text fr 100% legit", type: String }],
-  unshuffledTexts: {},
+  name: "unshuffle",
+  description: "shuffle command but like not",
+  options: [{ name: "text", description: "The shuffled text", type: String }],
 
   /**
    * @param {Discord.CommandInteraction} interaction
@@ -15,16 +15,10 @@ module.exports = {
   async execute(interaction, options) {
     const text = options.getString("text");
 
-    let shuffledText = text
-      .split("")
-      .sort(() => 0.5 - Math.random())
-      .join("");
-
-    // This is for the unshuffle command
-    this.unshuffledTexts[shuffledText] = text;
+    const unshuffledText = shuffleCmd.unshuffledTexts[text];
 
     const embed = new Discord.MessageEmbed()
-      .setDescription(shuffledText)
+      .setDescription(unshuffledText)
       .setColor(randomColor());
 
     await interaction.reply({ embeds: [embed] });
