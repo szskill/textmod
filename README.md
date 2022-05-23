@@ -56,12 +56,7 @@ me lol
 
 ## Who am I?
 
-I don't know
-
-## Am I real?
-
-Probably
-
-## Please tell me
-
-No
+You are me. I made these questions myself.  
+Why am I answering my questions?  
+Am I going insane?  
+Please help me
