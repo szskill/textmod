@@ -15,7 +15,8 @@ module.exports = {
   async execute(interaction, options) {
     const text = options.getString("text");
 
-    const unshuffledText = shuffleCmd.unshuffledTexts[text];
+    let unshuffledText = shuffleCmd.unshuffledTexts[text];
+    if (!unshuffledText) unshuffledText = text;
 
     const embed = new Discord.MessageEmbed()
       .setDescription(unshuffledText)
