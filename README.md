@@ -49,14 +49,3 @@ Deploy commands: `npm run deploy-commands`
 Run: `npm start`
 
 and that's it!
-
-## Who made this?
-
-me lol
-
-## Who am I?
-
-You are me. I made these questions myself.  
-Why am I answering my questions?  
-Am I going insane?  
-Please help me
