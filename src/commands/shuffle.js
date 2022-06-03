@@ -4,7 +4,7 @@ const randomColor = require("../utils/randomColor");
 
 module.exports = {
   name: "shuffle",
-  description: "spdijfapsidjf pasidjfpa isjdfpaijsdpifj",
+  description: "Osduf;oija;sodfja;osdufh aous d hfsdofgijs;doifgj sidjf;guo",
   options: [{ name: "text", description: "text fr 100% legit", type: String }],
   unshuffledTexts: {},
 
