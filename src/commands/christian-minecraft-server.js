@@ -4,7 +4,7 @@ const randomColor = require("../utils/randomColor");
 
 module.exports = {
   name: "christian-minecraft-server",
-  description: "Stops swearing in your christian Minecraft server",
+  description: "Stops the swearing in your christian Minecraft server",
   options: [{ name: "text", description: "The text to filter", type: String }],
 
   /**

@@ -1,0 +1,16 @@
+.command-list table {
+  border-collapse: collapse;
+}
+
+.command-list td,
+.command-list th {
+  border: 1px solid #ddd;
+
+  text-align: left;
+
+  padding: 8px;
+}
+
+.command-list tr:nth-child(even) {
+  background-color: #eee;
+}

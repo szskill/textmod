@@ -45,6 +45,8 @@ TOKEN=yourtokenhere
 }
 ```
 
+Install deps: `npm i && cd web && npm i && cd ..`
+Build website: `cd web && npm run build`
 Deploy commands: `npm run deploy-commands`
 Run: `npm start`
 

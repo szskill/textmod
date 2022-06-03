@@ -4,7 +4,7 @@ const randomColor = require("../utils/randomColor");
 
 module.exports = {
   name: "uwu",
-  description: "i wanna take a pic with cardi b inside my cardigan",
+  description: "😬",
   options: [{ name: "text", description: "idc anymore </3", type: String }],
 
   /**

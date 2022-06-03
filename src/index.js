@@ -1,5 +1,7 @@
 const fs = require("fs");
+const express = require("express");
 const Discord = require("discord.js-light");
+const config = require("../config.json");
 
 // 🔑 Load .env secrets into process.env
 require("dotenv").config();
@@ -42,7 +44,7 @@ client.on("ready", async () => {
     status: "dnd",
   });
 
-  console.log("👌 We're ready!");
+  console.log("👌 Bot is ready!");
 });
 
 // Handle (/) commands
@@ -68,6 +70,31 @@ client.on("interactionCreate", async (interaction) => {
     await interaction.reply({ embeds: [embed] });
   }
 });
+
+// Create the express app in which we will be serving the website
+const expressApp = express();
+expressApp.use(express.static(process.cwd() + "/web/dist"));
+expressApp.get("/", (req, res) => res.sendFile("index.html"));
+
+// Simple wrapper to get all available commands in the command map
+expressApp.get("/api/v1/commands", (req, res) => {
+  const list = [];
+  for (const command of commands.values()) {
+    const cmdObj = command;
+
+    // Delete the execute function because useless
+    if (cmdObj.execute) {
+      delete cmdObj.execute;
+    }
+
+    list.push(cmdObj);
+  }
+
+  res.send(list);
+});
+
+// 🚀 Start the website on port in config.json
+expressApp.listen(config.webPort, () => console.log("👌 Website is ready!"));
 
 // 🚀 Start the bot from the "TOKEN" environment variable
 // Easiest way to provide the token is to put it directly in your .env file:
