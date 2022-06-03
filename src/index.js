@@ -71,6 +71,15 @@ client.on("interactionCreate", async (interaction) => {
   }
 });
 
+// Check if the user actually built the web project
+if (!fs.existsSync(process.cwd() + "/web/dist")) {
+  console.log(
+    "😬 You haven't built the website! Go into the 'web' directory and perform" +
+      " 'npm i' and 'npm run build' in the terminal."
+  );
+  process.exit(1);
+}
+
 // Create the express app in which we will be serving the website
 const expressApp = express();
 expressApp.use(express.static(process.cwd() + "/web/dist"));
