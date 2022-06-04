@@ -45,9 +45,12 @@ TOKEN=yourtokenhere
 }
 ```
 
-Install deps: `npm i && cd web && npm i && cd ..`
-Build website: `cd web && npm run build`
-Deploy commands: `npm run deploy-commands`
+Install deps: `npm i && cd web && npm i && cd ..`  
+Build website: `cd web && npm run build`  
+Deploy commands: `npm run deploy-commands`  
 Run: `npm start`
 
 and that's it!
+
+_One-liner:_
+`npm i && cd web && npm i && npm run build && cd .. && npm run deploy-commands && npm start`
