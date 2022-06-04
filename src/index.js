@@ -21,15 +21,8 @@ const config = require("../config.json");
 // 🔑 Load .env secrets into process.env
 require("dotenv").config();
 
-// Create the Client object with the required intents.
-//
-// WARNING: DO NOT REMOVE ANY INTENT, WILL SAVE YOU A LOT OF TIME DEBUGGING
 const client = new Discord.Client({
-  intents: [
-    Discord.Intents.FLAGS.GUILDS,
-    Discord.Intents.FLAGS.GUILD_MESSAGES,
-    Discord.Intents.FLAGS.GUILD_MESSAGE_TYPING,
-  ],
+  intents: [Discord.Intents.FLAGS.GUILDS, Discord.Intents.FLAGS.GUILD_MEMBERS],
 });
 
 // Create the command map
@@ -120,6 +113,16 @@ expressApp.get("/api/v1/commands", (req, res) => {
 // A route to get the number of servers
 expressApp.get("/api/v1/numGuilds", (req, res) => {
   res.send(client.guilds.cache.size.toString());
+});
+
+// A route to get the number of users
+expressApp.get("/api/v1/numUsers", (req, res) => {
+  let numUsers = 0;
+  for (const guild of client.guilds.cache.values()) {
+    numUsers += guild.memberCount;
+  }
+
+  res.send(numUsers.toString());
 });
 
 // 🚀 Start the website on port in config.json
