@@ -20,12 +20,9 @@ export default class Statistics extends Component {
   render() {
     return (
       <div className="statistics">
-        <span className="statistics__title">Statistics</span>
+        <span>{this.state.numGuilds} servers</span>
         <br />
-        <br />
-        <span>🚀 In {this.state.numGuilds} servers</span>
-        <br />
-        <span>👥 Serving {this.state.numUsers} users</span>
+        <span>{this.state.numUsers} users</span>
       </div>
     );
   }

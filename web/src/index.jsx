@@ -1,5 +1,16 @@
 import { render } from "preact";
-import App from "./App";
+import Router from "preact-router";
+import CommandList from "./pages/CommandList/CommandList";
+import Home from "./pages/Home/Home";
 import "./index.css";
 
-render(<App />, document.getElementById("app"));
+function Main() {
+  return (
+    <Router>
+      <Home path="/" />
+      <CommandList path="/commands" />
+    </Router>
+  );
+}
+
+render(<Main />, document.getElementById("app"));

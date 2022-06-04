@@ -1,4 +1,5 @@
 import { Component } from "preact";
+import Navbar from "../../components/Navbar/Navbar";
 import "./CommandList.css";
 
 export default class CommandList extends Component {
@@ -16,6 +17,8 @@ export default class CommandList extends Component {
   render() {
     return (
       <div className="command-list">
+        <Navbar />
+
         <table>
           <tr>
             <th>Name</th>
