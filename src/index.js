@@ -103,7 +103,9 @@ expressApp.get("/api/v1/commands", (req, res) => {
 });
 
 // 🚀 Start the website on port in config.json
-expressApp.listen(config.webPort, () => console.log("👌 Website is ready!"));
+expressApp.listen(config.webPort, () =>
+  console.log(`👌 Website is ready on http://localhost:${config.webPort} !`)
+);
 
 // 🚀 Start the bot from the "TOKEN" environment variable
 // Easiest way to provide the token is to put it directly in your .env file:
