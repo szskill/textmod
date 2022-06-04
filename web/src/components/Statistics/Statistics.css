@@ -1,0 +1,12 @@
+.statistics {
+  padding: 0.25rem;
+
+  width: fit-content;
+
+  border: solid 1px #ddd;
+  border-radius: 4px;
+}
+
+.statistics__title {
+  color: #aaa;
+}

@@ -102,6 +102,11 @@ expressApp.get("/api/v1/commands", (req, res) => {
   res.send(list);
 });
 
+// A route to get the number of servers
+expressApp.get("/api/v1/numGuilds", (req, res) => {
+  res.send(client.guilds.cache.size.toString());
+});
+
 // 🚀 Start the website on port in config.json
 expressApp.listen(config.webPort, () =>
   console.log(`👌 Website is ready on http://localhost:${config.webPort} !`)
