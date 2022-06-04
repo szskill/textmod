@@ -1,4 +1,19 @@
 const fs = require("fs");
+
+// Check if the config is there
+if (
+  !(
+    fs.existsSync(process.cwd() + "/config.json") &&
+    fs.existsSync(process.cwd() + "/.env")
+  )
+) {
+  console.log(
+    "❌ The config and/or .env isn't there! Please read README.md for" +
+      " instructions on how to this bot up."
+  );
+  process.exit(1);
+}
+
 const express = require("express");
 const Discord = require("discord.js-light");
 const config = require("../config.json");
